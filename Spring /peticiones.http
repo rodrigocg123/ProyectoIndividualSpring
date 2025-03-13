@@ -2,10 +2,10 @@
 GET http://localhost:8080/webapi/ordenador
 
 ###borrar
-DELETE http://localhost:4200/webapi/numeroSerie/1111,11
+DELETE http://localhost:4200/webapi/ordenador/
 
 ###insertar
-POST http://localhost:8080/webapi/ordenador
+POST http://localhost:8080/webapi/ordenador/numeroserie/1111
 content-type: application/json
 
 {
