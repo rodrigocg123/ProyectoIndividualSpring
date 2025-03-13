@@ -1,17 +1,17 @@
 # buscartodos
-GET http://localhost:4200/ordenador
+GET http://localhost:8080/webapi/ordenador
 
 ###borrar
 DELETE http://localhost:4200/webapi/numeroSerie/1111,11
 
 ###insertar
-POST http://localhost:4200/
+POST http://localhost:8080/webapi/ordenador
 content-type: application/json
 
 {
-    "nserie": "1111,11",
-    "modelo":"java web",
-    "marca":"pedro",
-    "precio":100
+    "nserie": 1111 ,
+    "marca": "pedro" ,
+    "modelo": "java" ,
+    "precio": 1
 }
 ###
