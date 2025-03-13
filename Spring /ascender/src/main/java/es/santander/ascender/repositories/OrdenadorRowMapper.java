@@ -11,13 +11,11 @@ public class OrdenadorRowMapper implements RowMapper<Ordenador> {
 
     @Override
     public Ordenador mapRow(ResultSet rs, int rowNum) throws SQLException {
-
+        //poner los rs en el mismo orden que han sido declarados en la clase orden 
         return new Ordenador(
                 rs.getDouble("nserie"),
                 rs.getString("marca"),
                 rs.getString("modelo"),
                 rs.getInt("precio"));
     }
-    //poner los rs en el mismo orden que han sido declarados en la clase orden 
-
 }
