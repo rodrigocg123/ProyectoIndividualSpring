@@ -1,0 +1,6 @@
+es/santander/ascender/repositories/Ordenadorrepository.class
+es/santander/ascender/repositories/OrdenadorRowMapper.class
+es/santander/ascender/negocio/Ordenador.class
+es/santander/ascender/restcontrollers/OrdenadorRestController.class
+es/santander/ascender/repositories/OrdenadorrepositoryJDBC.class
+es/santander/ascender/IndividualApplication.class

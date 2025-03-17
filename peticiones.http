@@ -1,0 +1,23 @@
+# buscartodos
+GET http://localhost:8080/webapi/ordenador/buscartodos
+
+###borrar
+DELETE http://localhost:8080/webapi/ordenador/numeroserie/1111
+
+
+###insertar
+POST http://localhost:8080/webapi/ordenador
+content-type: application/json
+
+{
+    "nserie" : "1111222",
+    "marca" : "pedro",
+    "precio" : "1",
+    "modelo" : "111"
+}
+
+###seleccionar
+GET http://localhost:8080/webapi/ordenador/seleccionar/123
+
+
+###
