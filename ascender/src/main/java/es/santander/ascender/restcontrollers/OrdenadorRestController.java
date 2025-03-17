@@ -46,13 +46,13 @@ public class OrdenadorRestController {
     public void borrar(@PathVariable int nserie) {
         ordenadorRepository.borrar(nserie);
     }
-
+    
     @GetMapping ("/webapi/ordenador")
     @CrossOrigin(origins = "http://localhost:4200")
     public Ordenador buscarUno(@PathVariable int nserie) {
         return ordenadorRepository.buscarUno(nserie);
     }
-
+    //FUNCION SELECCIONAR
     @GetMapping ("/seleccionar/{nserie}")
     @CrossOrigin(origins = "http://localhost:4200")
     public List<Ordenador> seleccionar(@PathVariable int nserie) {
