@@ -10,7 +10,7 @@ POST http://localhost:8080/webapi/ordenador
 content-type: application/json
 
 {
-    "nserie" : "234",
+    "nserie" : "244",
     "marca" : "pedro",
     "precio" : "1",
     "modelo" : "111"

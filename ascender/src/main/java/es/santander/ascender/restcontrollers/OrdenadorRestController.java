@@ -25,7 +25,7 @@ public class OrdenadorRestController {
     private Ordenadorrepository ordenadorRepository;
 
     // FUNCION BUSCAR
-    @GetMapping ("/buscartodos")
+    @GetMapping 
     @CrossOrigin(origins = "http://localhost:4200")
     public List<Ordenador> buscartodos() {
 
