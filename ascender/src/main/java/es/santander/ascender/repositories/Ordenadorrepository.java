@@ -12,11 +12,11 @@ public interface Ordenadorrepository {
     List<Ordenador> seleccionar();
 
     void insertar(Ordenador ordenador);
-
+    // funcion borrar uno
     void borrar(int nserie);
 
-    // funcion borrar uno
-    void borrar(int... nserie);
+    //funcion borrar todos
+    void borrartodos();
 
     Ordenador buscarUno(int nserie);
 }

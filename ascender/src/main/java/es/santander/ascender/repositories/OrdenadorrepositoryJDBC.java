@@ -16,11 +16,6 @@ public class OrdenadorrepositoryJDBC implements Ordenadorrepository {
     @Autowired
     private JdbcTemplate plantilla;
 
-    // @Override
-    // public List<Ordenador> seleccionartodos() {
-    //     return plantilla.query("select * from ordenador", new OrdenadorRowMapper());
-    // }
-
     @Override
     public List<Ordenador> buscartodos() {
         return plantilla.query("select * from ordenador", new OrdenadorRowMapper());
@@ -36,23 +31,25 @@ public class OrdenadorrepositoryJDBC implements Ordenadorrepository {
         plantilla.update("insert into ordenador values (?,?,?,?)",
                 ordenador.getNserie(),
                 ordenador.getMarca(),
-                ordenador.getPrecio(),
-                ordenador.getModelo());
+                ordenador.getModelo(),
+                ordenador.getPrecio());
+
     }
 
     @Override
     public void borrar(int nserie) {
         plantilla.update("DELETE FROM ordenador WHERE nserie=?", nserie);
     }
-    //borrar todos
+
+    // borrar todos
     @Override
-    public void borrar(int... nserie) {
-        plantilla.update("delete from ordenador where nserie=?", nserie);
+    public void borrartodos() {
+        plantilla.update("delete from ordenador");
     }
 
     @Override
     public Ordenador buscarUno(int nserie) {
-        return plantilla.queryForObject("select * from ordenador where nserie=?",new OrdenadorRowMapper(), nserie);
+        return plantilla.queryForObject("select * from ordenador where nserie=?", new OrdenadorRowMapper(), nserie);
     }
 
 }

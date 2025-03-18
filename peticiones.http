@@ -1,5 +1,5 @@
 # buscartodos
-GET http://localhost:8080/webapi/ordenador/buscartodos
+GET http://localhost:8080/webapi/ordenador
 
 ###borrar
 DELETE http://localhost:8080/webapi/ordenador/numeroserie/1111222
@@ -10,7 +10,7 @@ POST http://localhost:8080/webapi/ordenador
 content-type: application/json
 
 {
-    "nserie" : "244",
+    "nserie" : "315",
     "marca" : "pedro",
     "precio" : "1",
     "modelo" : "111"

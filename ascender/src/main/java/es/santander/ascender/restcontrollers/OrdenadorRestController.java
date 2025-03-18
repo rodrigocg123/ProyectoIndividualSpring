@@ -46,8 +46,13 @@ public class OrdenadorRestController {
     public void borrar(@PathVariable int nserie) {
         ordenadorRepository.borrar(nserie);
     }
+    @DeleteMapping ("/borrartodos")
+    @CrossOrigin(origins = "http://localhost:4200")
+    public void borrartodos() {
+        ordenadorRepository.borrartodos();;
+    }
     
-    @GetMapping ("/webapi/ordenador")
+    @GetMapping ("/{nserie}")
     @CrossOrigin(origins = "http://localhost:4200")
     public Ordenador buscarUno(@PathVariable int nserie) {
         return ordenadorRepository.buscarUno(nserie);
