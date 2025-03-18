@@ -25,7 +25,7 @@ public class OrdenadorRestController {
     private Ordenadorrepository ordenadorRepository;
 
     // FUNCION BUSCAR
-    @GetMapping 
+    @GetMapping
     @CrossOrigin(origins = "http://localhost:4200")
     public List<Ordenador> buscartodos() {
 
@@ -46,21 +46,34 @@ public class OrdenadorRestController {
     public void borrar(@PathVariable int nserie) {
         ordenadorRepository.borrar(nserie);
     }
-    @DeleteMapping ("/borrartodos")
+
+    @DeleteMapping("/borrartodos")
     @CrossOrigin(origins = "http://localhost:4200")
     public void borrartodos() {
-        ordenadorRepository.borrartodos();;
+        ordenadorRepository.borrartodos();
+        ;
     }
-    
-    @GetMapping ("/{nserie}")
+
+    @GetMapping("/{nserie}")
     @CrossOrigin(origins = "http://localhost:4200")
     public Ordenador buscarUno(@PathVariable int nserie) {
         return ordenadorRepository.buscarUno(nserie);
     }
-    //FUNCION SELECCIONAR
-    @GetMapping ("/seleccionar/{nserie}")
+
+    // FUNCION SELECCIONAR
+    @GetMapping("/seleccionar/{nserie}")
     @CrossOrigin(origins = "http://localhost:4200")
     public List<Ordenador> seleccionar(@PathVariable int nserie) {
         return ordenadorRepository.seleccionar();
+    }
+
+    // FUNCION BORRAR SELECCIONADOS
+    @PostMapping("/borrarseleccionados")
+    @CrossOrigin(origins = "http://localhost:4200")
+    public void borrarseleccionados(@RequestBody List<Integer> nseries) {
+        for (Integer nserie : nseries) {
+            ordenadorRepository.borrar(nserie);
+
+        }
     }
 }
