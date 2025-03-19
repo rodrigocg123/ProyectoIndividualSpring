@@ -71,7 +71,7 @@ public class OrdenadorRestController {
     @PostMapping("/borrarseleccionados")
     @CrossOrigin(origins = "http://localhost:4200")
     public void borrarseleccionados(@RequestBody List<Integer> nseries) {
-        for (Integer nserie : nseries) {
+        for (int  nserie : nseries) {
             ordenadorRepository.borrar(nserie);
 
         }
